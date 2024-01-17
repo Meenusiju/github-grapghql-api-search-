@@ -1,15 +1,20 @@
-# About
+# Github repository search app using graphQL Api
 
 This project will make use of [github's graphQL api](https://api.github.com/graphql) that let users to search github repository 
 
 # Tech stack
 
 Languages/Library `React` `Typescript` 
+
 Testing `Jest` 
+
 Database `GraphQL` 
+
 Styling `Tailwind`
 
 # Installation
+
+Install dependencies for our project
 
 ### `npm i`
 
@@ -21,7 +26,7 @@ Then paste the auth token in a .env file as below
 
 ### `REACT_APP_GITHUB_ACCESS_TOKEN=<auth token>`
 
-## Scripts 
+# Scripts 
 
 # Run
 
