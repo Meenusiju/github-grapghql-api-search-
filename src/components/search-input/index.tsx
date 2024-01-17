@@ -18,7 +18,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Search"
+        placeholder="Search for repositories eg: react project"
       />
     </div>
   );

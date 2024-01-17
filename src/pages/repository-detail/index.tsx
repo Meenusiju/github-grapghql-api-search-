@@ -10,9 +10,6 @@ export const RepositoryDetail = () => {
     variables: { owner, name },
   });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
   const repository = data?.repository;
 
   return (
@@ -23,6 +20,8 @@ export const RepositoryDetail = () => {
       <h2 className="text-3xl font-bold  text-center m-8">
         Repository Details
       </h2>
+      {loading && <p className="text-gray-700 pt-4">Loading...</p>}
+      {error && <p className="text-red-500">Error: {error.message}</p>}
       {repository && (
         <div className="p-24 rounded shadow-2xl flex flex-col items-center gap-6">
           <img

@@ -8,18 +8,22 @@ describe("SearchInput", () => {
     const onChangeMock = jest.fn();
     render(<SearchInput value="" onChange={onChangeMock} />);
 
-    expect(screen.getByPlaceholderText("Search")).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText("Search for repositories eg: react project")
+    ).toBeInTheDocument();
   });
 
-  test("Should handle input change", () => {
+  it("Should handle input change", () => {
     const onChangeMock = jest.fn();
     render(<SearchInput value="" onChange={onChangeMock} />);
 
-    fireEvent.change(screen.getByPlaceholderText("Search"), {
-      target: { value: "test" },
-    });
+    fireEvent.change(
+      screen.getByPlaceholderText("Search for repositories eg: react project"),
+      {
+        target: { value: "test" },
+      }
+    );
 
-    // Check if the onChange function is called with the correct value
     expect(onChangeMock).toHaveBeenCalledWith("test");
   });
 });

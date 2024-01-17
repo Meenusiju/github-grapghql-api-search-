@@ -17,11 +17,8 @@ describe("CardRepository", () => {
   test("renders CardRepository component", () => {
     render(<CardRepository repo={mockRepo} />);
 
-    // Check if the card content is rendered
     expect(screen.getByText("My test repo")).toBeInTheDocument();
     expect(screen.getByText("Test Description")).toBeInTheDocument();
     expect(screen.getByText("testuser")).toBeInTheDocument();
   });
-
-  // Add more test cases as needed
 });
